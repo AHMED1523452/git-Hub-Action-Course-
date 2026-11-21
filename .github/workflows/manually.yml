@@ -1,3 +1,4 @@
+name: Manual deploying workflow 
 on:
   workflow_dispatch:
 
