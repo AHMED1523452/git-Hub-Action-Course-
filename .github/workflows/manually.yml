@@ -18,4 +18,4 @@ jobs:
 
     steps:
       - name: First Step
-        run: echo "Dpeloying The Application"
+        run: echo "Dpeloying The Application to the ${{inputs.environment}}"
