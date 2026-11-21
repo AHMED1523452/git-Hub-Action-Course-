@@ -1,21 +1,11 @@
-name: Manual deploying workflow 
-on:
-  workflow_dispatch:
-    inputs:
-      environment: 
-        description: "Choose Environment"
-        required:  true
-        type: choice
-        default: "staging"
-        options: 
-          - staging
-          - production 
-        
-
-jobs:
-  deployment:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: First Step
-        run: echo "Dpeloying The Application to the ${{inputs.environment}}"
+on: 
+   repository_dispatch: 
+     types: [incident_report]
+  
+jobs: 
+  handle-incident: 
+     runs-on: ubuntu-latest 
+     
+     steps: 
+       - name: Print incident details
+         run: echo "Incident reported"  
